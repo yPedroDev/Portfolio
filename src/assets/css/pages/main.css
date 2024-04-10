@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: rgb(255, 134, 41);
+  color: black;
+}
+*{
+  font-family: 'DoodlePenLimited', sans-serif;
+}
+
+h1,
+h5,
+h4,
+h3,
+li,
+a {
+  font-size: 20px;
+}
+button {
+  width: 200px;
+  align-self: center;
+}
+
+/* Center orientation */
+
+.center img::selection {
+  color: transparent;
+  background-color: transparent;
+}
+
+.center h3,
+.center a,
+.center p,
+.center b,
+.center br,
+.center h6,
+.center h5,
+.center h4,
+.center h2,
+.center h1 {
+  color: white;
+}
+
+.center {
+  /* background-image: url("https://media.discordapp.net/attachments/1028750792640954368/1226558319909404845/dark_brown_silk_texture_fabric_background_hd_silk-HD.png?ex=66253473&is=6612bf73&hm=d5698e9973875b730ea2a686bfadc168fd9b7361515c8abdef894425f8e4bcd3&=&format=webp&quality=lossless&width=687&height=386"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+}
+
+/* Others */
+
+/* Typewrite */
+.blinkingCursor {
+  position: relative;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  left: 3px;
+  top: 0;
+  opacity: 1;
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Floating image */
+@keyframes floating {
+  0% {
+    transform:translateY(0px);
+  }
+  50%{
+    transfrom:translateY(-20px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+.floatingImage{
+  transform: translatey(0px);
+  transition: all 0.4s ease-in-out;
+  animation: floating 6s ease-in-out infinite;
+
+  width: 150px;
+  height: 150px;
+}
+
+
+/* Smooth Scrollbar */
+html::-webkit-scrollbar{
+  width: 5px;
+  height: 8px;
+  background: #101010;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #252525;
+}
