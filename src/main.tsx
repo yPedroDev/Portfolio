@@ -4,7 +4,6 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Home, NoPageFound, LandingPageLayout, Error } from "./pages";
-// import { NextUIProvider } from "@nextui-org/react";
 import "./assets/css/pages/main.css";
 
 const Loader = React.lazy(() => import("./components/loader/Loader"));

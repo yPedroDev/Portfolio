@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
+    "./index.html",
     './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
   daisyui: {
     themes: [
       "light",
@@ -42,10 +38,7 @@ export default {
       "dim",
       "nord",
       "sunset",
-    ],
-    mytheme: {
-      "neutral": "#1b1108"
-    },
+    ]
   },
   
   plugins: [require("daisyui")],
