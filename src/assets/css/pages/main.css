@@ -1,8 +1,11 @@
+@import url("https://fonts.cdnfonts.com/css/doodlepenlimited");
+@import url("https://fonts.cdnfonts.com/css/dongle");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
+/* Others */
+html {
   scroll-behavior: smooth;
 }
 
@@ -10,17 +13,21 @@ html{
   background-color: rgb(255, 134, 41);
   color: black;
 }
-*{
-  font-family: 'DoodlePenLimited', sans-serif;
+* {
+  font-family: "Dongle", sans-serif;
 }
 
-h1,
+h3,
+a,
+p,
+b,
+br,
+h6,
 h5,
 h4,
-h3,
-li,
-a {
-  font-size: 20px;
+h2,
+h1 {
+  font-size: 30px;
 }
 button {
   width: 200px;
@@ -49,16 +56,14 @@ button {
 
 .center {
   /* background-image: url("https://media.discordapp.net/attachments/1028750792640954368/1226558319909404845/dark_brown_silk_texture_fabric_background_hd_silk-HD.png?ex=66253473&is=6612bf73&hm=d5698e9973875b730ea2a686bfadc168fd9b7361515c8abdef894425f8e4bcd3&=&format=webp&quality=lossless&width=687&height=386"); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 65px;
   flex-direction: column;
   display: flex;
 }
-
-/* Others */
 
 /* Typewrite */
 .blinkingCursor {
@@ -90,17 +95,17 @@ button {
 /* Floating image */
 @keyframes floating {
   0% {
-    transform:translateY(0px);
+    transform: translateY(0px);
   }
-  50%{
-    transform:translateY(-20px);
+  50% {
+    transform: translateY(-20px);
   }
-  100%{
-    transform:translateY(0px);
+  100% {
+    transform: translateY(0px);
   }
 }
 
-.floatingImage{
+.floatingImage {
   transform: translatey(0px);
   transition: all 0.4s ease-in-out;
   animation: floating 6s ease-in-out infinite;
@@ -109,14 +114,13 @@ button {
   height: 150px;
 }
 
-
 /* Smooth Scrollbar */
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 5px;
   height: 8px;
   background: #101010;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: #252525;
 }

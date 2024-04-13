@@ -15,13 +15,13 @@ export default function Footer() {
         <aside>
           <div>
             <div className="display flex">
-              {/* <Image
+              <Image
                  width={58}
                  height={58}
                  alt="A logo do site (meio obvio)"
-                 src="https://media.discordapp.net/attachments/1028750792640954368/1225816089842417706/gC9xcCuMDGQ9NBAAQEAaguRsIkBCCAk1BDGRAAARAAgYUnAAFceBOiAyAAAiAAApMQgABOQg1lQAAEQAAEFp4ABHDhTYgOgAAIgAAITEJgKgIYBAFjjAWTNABlQAAEQAAEQGAeBP4PL7ZlpWj11gAAAAASUVORK5CYII.png?ex=66228132&is=66100c32&hm=fd1303bb02d15860a70588fbbc8bbc72430ac4d7d82d8916cb8744413857d81d&=&format=webp&quality=lossless&width=560&height=558"
-               ></Image> */}
-              <a
+                 src="https://media.discordapp.net/attachments/1028750792640954368/1228438476014489720/image-removebg-preview.png?ex=662c0b7b&is=6619967b&hm=1d1db4797a3bf394339ce5367201f2a3bc14884344fa627830a851339527fc3d&=&format=webp&quality=lossless&width=232&height=266"
+               ></Image>
+              {/* <a
                 className="space-x-3"
                 style={{ fontWeight: "bold", userSelect: "none" }}
               >
@@ -53,7 +53,7 @@ export default function Footer() {
                 >
                   {"/>"}
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="-md-5" />

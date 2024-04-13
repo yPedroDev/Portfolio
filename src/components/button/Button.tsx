@@ -2,6 +2,11 @@ import React, { ComponentProps } from "react";
 // import { button } from "@nextui-org/react";
 import { twMerge } from "tailwind-merge";
 import { useNavigate } from "react-router-dom";
+import { styled } from 'styled-components';
+
+const BtnContent = styled.div`
+  font-size: 25px
+`
 export type ButtonProps = ComponentProps<"button"> & {
   text?: String;
   className?: string;
@@ -25,9 +30,9 @@ const Button = ({ text, className, to, isMobile }: ButtonProps) => {
         }
       }}
       ref={btnRef}
-      className={twMerge("btn w-20 m-1", className)}
+      className={twMerge("btn w-auto m-1", className)}
     >
-      {btnContent}
+      <BtnContent>{btnContent}</BtnContent>
     </button>
   );
 
