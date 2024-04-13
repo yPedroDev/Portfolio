@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Button = React.lazy(() => import("../../components/button/Button"));
 const Typewriter = React.lazy(
@@ -7,20 +7,71 @@ const Typewriter = React.lazy(
 );
 
 const Image = React.lazy(() => import("../../components/utils/image/Image"));
-import { NavbarRedu, NavTypes } from "../../reducers/components/Navbar/navbarRedu";
+import {
+  NavbarRedu,
+  NavTypes,
+} from "../../reducers/components/Navbar/navbarRedu";
+// const cardKeyfr = keyframes`
+//   from{
+//     transform: rotate(0deg);
+//   }
+//   to{
+//     transform: rotate(360deg);
+//   }
+// `
 
 var Projectsection = styled.section`
   background-color: #191919;
   width: 300px;
   height: 200px;
   border-radius: 25px;
-  margin: 10px;
-  border: 1px #ffff solid;
+  margin: 38px;
+  overflow: hidden;
+  content: "";
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+  transition: all 0.2s linear;
+  &:hover {
+    box-shadow:
+      0 -1vmin 2vmin orange inset,
+      0 1vmin 2vmin orange inset,
+      0 -1vmin 5vmin orange inset;
+
+    filter: drop-shadow(0 0 1vmin DarkOrange)
+      drop-shadow(0 1vmin 2vmin DarkOrange)
+      drop-shadow(2vmin -1vmin 1vmin DarkOrange) drop-shadow(0 0 7vmin orange);
+
+  }
+  // &:before{
+  //   position: absolute;
+  //   background: conic-gradient(transparent 270deg, white, transparent);
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   aspect-ratio: 1;
+  //   width: 100%;
+  // }
+  // &:after{
+  //   content: '';
+  //   background: inherit;
+  //   border-radius: inherit;
+  //   position: absolute;
+  //   inset: var(--offset);
+  //   height: calc(100% - 2 * var(--offset));
+  //   width: calc(100% - 2 * var(--offset));
+
+  // }
 `;
 
 const Home = () => {
   const sectionsArrayCount = ["A", "B", "C", "D"];
-  const [stateNav, dispatchNav] = React.useReducer(NavbarRedu, { isMobile: false });
+  const [stateNav, dispatchNav] = React.useReducer(NavbarRedu, {
+    isMobile: false,
+  });
 
   return (
     <>
@@ -82,17 +133,17 @@ const Home = () => {
                     <div className="m-1" />
                     <span>
                       tenho <b style={{ color: "yellow" }}>15</b> anos
-                    </span>{" "}
-                    e móro em porto velho no estado de{" "}
+                    </span>
+                    , móro em porto velho no estado de{" "}
                     <span className="text-emerald-400">rondonia</span>.
                     <div className="m-1" />
                     <span>
                       {" "}
                       Estudo em <b style={{ color: "pink" }}>
-                        programação
+                        programação de fullstack
                       </b>{" "}
                       {/* <div className="divider"></div> */}
-                      des dos meus 9 anos de idade.
+                      des dos meus 13 anos de idade.
                     </span>{" "}
                     <div className="divider"></div>
                   </a>
