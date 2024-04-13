@@ -44,7 +44,6 @@ var Projectsection = styled.section`
     filter: drop-shadow(0 0 1vmin DarkOrange)
       drop-shadow(0 1vmin 2vmin DarkOrange)
       drop-shadow(2vmin -1vmin 1vmin DarkOrange) drop-shadow(0 0 7vmin orange);
-
   }
   // &:before{
   //   position: absolute;
@@ -83,6 +82,7 @@ const Home = () => {
           >
             <div className="hero-content">
               <div>
+                <div className="m-32"/>
                 <div className="avatar">
                   {/* <Avatar
                   isBordered
@@ -139,7 +139,8 @@ const Home = () => {
                     <div className="m-1" />
                     <span>
                       {" "}
-                      Estudo em <b style={{ color: "pink" }}>
+                      Estudo{" "}
+                      <b style={{ color: "pink" }}>
                         programação de fullstack
                       </b>{" "}
                       {/* <div className="divider"></div> */}
@@ -159,25 +160,29 @@ const Home = () => {
                 </Avatar> */}
                   <div>
                     <h1>↶</h1>
-                    <div
-                      style={{ marginTop: "260px" }}
-                      className={
-                        stateNav.isMobile
-                          ? "flex-col lg:flex-row justify-center"
-                          : "flex flex-wrap justify-center"
-                      }
-                    >
-                      {sectionsArrayCount.map(
-                        (key) => (
-                          <div>
-                            <Projectsection key={key}>
-                              <h1>{key}</h1>
-                              <Button text={"Click to view"} />
-                            </Projectsection>
-                          </div>
-                        ),
-                        null
-                      )}
+                    <div style={{ marginTop: "260px" }}>
+                      <p>Projetos</p>
+                      <div className="divider"/>
+                      <div
+                        className={
+                          stateNav.isMobile
+                            ? "flex-col lg:flex-row justify-center"
+                            : "flex flex-wrap justify-center"
+                        }
+                      >
+                        {sectionsArrayCount.map(
+                          (key) => (
+                            <div>
+                              <Projectsection key={key}>
+                                <h1>{key}</h1>
+                                <Button text={"Click to view"} />
+                              </Projectsection>
+                            </div>
+                          ),
+                          null
+                        )}
+                      </div>
+                      <div className="divider"/>
                     </div>
                   </div>
                 </div>

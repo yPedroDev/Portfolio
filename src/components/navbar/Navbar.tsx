@@ -20,7 +20,7 @@ const MyNavbar = () => {
   });
 
   const handleResize = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 640) {
       dispatchNav({ type: NavTypes.SET_MOB, payload: true });
     } else {
       dispatchNav({ type: NavTypes.SET_MOB, payload: false });

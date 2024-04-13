@@ -2,15 +2,15 @@ import React, { ComponentProps } from "react";
 // import { button } from "@nextui-org/react";
 import { twMerge } from "tailwind-merge";
 import { useNavigate } from "react-router-dom";
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 const BtnContent = styled.div`
-  font-size: 25px
-`
+  font-size: 15px;
+`;
 export type ButtonProps = ComponentProps<"button"> & {
   text?: String;
   className?: string;
-  to?: String;
+  to?: String | number;
   isMobile?: boolean;
   //   iconButton?: boolean;
   //   icon: String;
@@ -25,7 +25,8 @@ const Button = ({ text, className, to, isMobile }: ButtonProps) => {
     <button
       onClick={() => {
         if (to != "" || to != "undefined") {
-          navigate("/" + to);
+          if (typeof to === "number") navigate(to);
+          else navigate("/" + to);
           console.log(to);
         }
       }}
