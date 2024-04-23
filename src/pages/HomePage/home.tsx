@@ -95,7 +95,7 @@ const Home = () => {
                   <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <Image
                       alt="Minha imagem linda e maravilhosa"
-                      src="https://media.discordapp.net/attachments/1028750792640954368/1225839842689286275/image.png?ex=66229751&is=66102251&hm=e6eefaebdae9c1eac29375f56909a365e20c87c40d04cba9c869bc6dd0221c3d&=&format=webp&quality=lossless&width=317&height=391"
+                      src="https://media.discordapp.net/attachments/1028750792640954368/1225839842689286275/image.png?ex=66292ed1&is=6627dd51&hm=3313047d3cc1cbf3a369de57c01248b3c1324e54b44ac9d2e756c1a154b90189&=&format=webp&quality=lossless&width=346&height=426"
                       width={58}
                       height={58}
                     />
